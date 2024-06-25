@@ -1,4 +1,4 @@
-package Persistente;
+package ar.frba.utn.sharksales.accenture2024equipo03inventario.Persistente;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;

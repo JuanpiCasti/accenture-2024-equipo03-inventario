@@ -1,6 +1,6 @@
-package model.producto;
+package ar.frba.utn.sharksales.accenture2024equipo03inventario.model.producto;
 
-import Persistente.Persistente;
+import ar.frba.utn.sharksales.accenture2024equipo03inventario.Persistente.Persistente;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;

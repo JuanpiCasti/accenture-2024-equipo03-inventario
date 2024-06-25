@@ -1,8 +1,10 @@
-package rabbitMQ;
+package ar.frba.utn.sharksales.accenture2024equipo03inventario.rabbitMQ;
 
 import jakarta.persistence.Column;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
+
 
 @RabbitListener(queues = "hello")
 public class Receiver {

@@ -1,10 +1,11 @@
-package Controller;
+package ar.frba.utn.sharksales.accenture2024equipo03inventario.Controller;
 
 
+import ar.frba.utn.sharksales.accenture2024equipo03inventario.DTOinput.OperacionDTO;
 import java.util.List;
 import java.util.Optional;
-import model.producto.InventarioProducto;
-import model.repositories.RepositorioInventario;
+import ar.frba.utn.sharksales.accenture2024equipo03inventario.model.producto.InventarioProducto;
+import ar.frba.utn.sharksales.accenture2024equipo03inventario.model.repositories.RepositorioInventario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +27,11 @@ public class InventarioController {
     InventarioProducto inventarioProducto1 = repositorioInventario.save(inventarioProducto);
     return ResponseEntity.ok(inventarioProducto1);
   }
+  @PostMapping
+  public ResponseEntity<OperacionDTO> registrarOperacion(@RequestBody OperacionDTO operacionDTO) {
+    return null;
+  }
+
 
   @GetMapping
   public ResponseEntity<List<InventarioProducto>> listarInventario() {
