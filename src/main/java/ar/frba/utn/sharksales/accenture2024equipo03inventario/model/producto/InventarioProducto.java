@@ -16,7 +16,7 @@ import lombok.Setter;
 @Entity
 @NoArgsConstructor
 public class InventarioProducto extends Persistente{
-
+  @Column
   private Long productoid;
   @Column
   private int stockActual;
