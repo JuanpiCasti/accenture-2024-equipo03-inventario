@@ -18,6 +18,6 @@ public class Sender {
 
   public void sendMessage(OperacionDTO operacion) {
     template.convertAndSend(bajoStockQueue.getName(), operacion);
-    System.out.println(" [x] Sent message with OperacionDTO: " + operacion.toString());
+    System.out.println(" [x] Sent message with OperacionDTO: " + operacion);
   }
 }
