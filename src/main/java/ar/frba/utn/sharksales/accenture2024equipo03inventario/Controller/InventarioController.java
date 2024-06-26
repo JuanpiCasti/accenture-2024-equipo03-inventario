@@ -27,7 +27,7 @@ public class InventarioController {
     InventarioProducto inventarioProducto1 = repositorioInventario.save(inventarioProducto);
     return ResponseEntity.ok(inventarioProducto1);
   }
-  @PostMapping
+  @PostMapping("/operacion")
   public ResponseEntity<OperacionDTO> registrarOperacion(@RequestBody OperacionDTO operacionDTO) {
     return null;
   }

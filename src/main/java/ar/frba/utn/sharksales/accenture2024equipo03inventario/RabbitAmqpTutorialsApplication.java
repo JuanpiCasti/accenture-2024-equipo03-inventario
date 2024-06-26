@@ -20,6 +20,4 @@ public class RabbitAmqpTutorialsApplication {
     public static void main(String[] args) throws Exception {
         SpringApplication.run(RabbitAmqpTutorialsApplication.class, args);
     }
-
-
 }
