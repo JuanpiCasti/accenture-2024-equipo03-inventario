@@ -2,6 +2,7 @@ package ar.frba.utn.sharksales.accenture2024equipo03inventario.Controller;
 
 
 import ar.frba.utn.sharksales.accenture2024equipo03inventario.DTOinput.OperacionDTO;
+import ar.frba.utn.sharksales.accenture2024equipo03inventario.Services.InventarioServices;
 import java.util.List;
 import java.util.Optional;
 import ar.frba.utn.sharksales.accenture2024equipo03inventario.model.producto.InventarioProducto;
@@ -22,6 +23,9 @@ public class InventarioController {
   @Autowired
   private RepositorioInventario repositorioInventario;
 
+  @Autowired
+  InventarioServices inventarioServices;
+
   @PostMapping
   public ResponseEntity<InventarioProducto> crearInventario(@RequestBody InventarioProducto inventarioProducto) {
     InventarioProducto inventarioProducto1 = repositorioInventario.save(inventarioProducto);
@@ -29,7 +33,8 @@ public class InventarioController {
   }
   @PostMapping("/operacion")
   public ResponseEntity<OperacionDTO> registrarOperacion(@RequestBody OperacionDTO operacionDTO) {
-    return null;
+   inventarioServices.registrarOperacion(operacionDTO);
+   return ResponseEntity.ok(new OperacionDTO());
   }
 
 
